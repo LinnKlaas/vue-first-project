@@ -1,12 +1,5 @@
 <template>
-  <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Speiseplan</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="webserver.js"></script>
-  </head>
+  
   <body>
     <h1>Speiseplan HfG Gmünd</h1>
     Wähle einen Wochentag:
@@ -36,8 +29,6 @@
        </tr>
     </table>
   </body>
-</html>
-
 
 </template>
 

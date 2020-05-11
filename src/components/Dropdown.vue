@@ -16,7 +16,7 @@
 export default {
   name: 'Dropdown',
   props: {
-    msg: String
+    data: String
   }
 }
 </script>

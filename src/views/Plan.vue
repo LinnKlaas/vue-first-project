@@ -1,8 +1,7 @@
 <template>
   <div>
-    {{loadedData.data}}
-    <Dropdown></Dropdown>
-    <List></List>
+    <Dropdown :days="dropdownData"></Dropdown>
+    <List :listEssen="loadedData.data"></List>
   </div>
 
 </template>
@@ -23,6 +22,7 @@ export default {
   data:function() {
     return {
       loadedData: "no data loaded",
+      dropdownData: ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"],
     }
   },
   mounted() {

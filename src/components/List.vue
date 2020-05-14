@@ -1,30 +1,36 @@
 <template> 
-<body>
+<div>
 <table border="1">
-      <tr>
-        <th>Category</th>
-        <th>Content Information</th>
-        <th>Cost</th>
-      </tr>
-      <tr>
-        <td>Suppe</td>
-        <td>mit Antioxidationsmittel, A,
-          Weizengluten,
-          Eier,
-          Sellerie</td>
-        <td>employees: 0,90€,
-          guests: 1,40€,
-          students: 0,70€</td>
-       </tr>
+      <th>Kategorie</th>
+      <th>Infos</th>
+      <th>Kosten</th>
+      <th>Tag</th>
+      <th>Downvotes</th>
+      <th>ID</th>
+      <th>Labels</th>
+      <th>Name</th>
+      <th>Upvotes</th>
+
+      <tr v-for="meal in listEssen" :key="meal">
+            <th>{{meal.category}}</th>
+            <td>{{meal.contentInformation}}</td>
+            <td>{{meal.cost}}</td>
+            <td>{{meal.day}}</td>
+            <td>{{meal.downvotes}}</td>
+            <td>{{meal.id}}</td>
+            <td>{{meal.labels}}</td>
+            <td>{{meal.name}}</td>
+            <td>{{meal.upvotes}}</td>
+          </tr>
     </table>
-  </body>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'List',
   props: {
-    data: String
+    listEssen: Object
   }
 }
 </script>

@@ -1,18 +1,10 @@
 <template>
   <div>
-      <tr v-for="meal in listEssen" :key="meal">
-            <th>{{meal.category}}</th>
-            <td>{{meal.contentInformation}}</td>
-            <td>{{meal.cost}}</td>
-            <td>{{meal.day}}</td>
-            <td>{{meal.downvotes}}</td>
-            <td>{{meal.id}}</td>
-            <td>{{meal.labels}}</td>
-            <td>{{meal.name}}</td>
-            <td>{{meal.upvotes}}</td>
-      </tr>
+      
       <h5>{{mahlzeiten.category}}</h5>
-      <h3>{{mahlzeiten.cost.students}}</h3>
+      <hr/>
+      <h3>{{mahlzeiten.name}}</h3>
+      {{mahlzeiten.cost.students}} <br/>
       DV: {{mahlzeiten.upvotes}}
       <div class="ci" v-for="ci in mahlzeiten.contentInformation" :key="ci"><small>{{ci}}</small></div>
       <button v-on:click="sendUpvote(mahlzeiten.id)"><b-icon icon="hand-thumbs-up" variant="success"></b-icon> (0)</button>
@@ -22,6 +14,11 @@
 
 <script>
 //import axios from 'axios'
+import Vue from 'vue'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+
+Vue.use(BootstrapVue)
+Vue.use(BootstrapVueIcons)
 
 export default {
   name: 'Mahlzeit',

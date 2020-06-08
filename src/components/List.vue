@@ -1,23 +1,18 @@
 <template> 
 <div>
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      :interval="4000"
-      controls
-      indicators
-      background="#ababab"
-      img-width="1024"
-      img-height="480"
-      style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
-      <b-carousel-slide class="slide" img-src="https://picsum.photos/1024/480/?image=52">
-          <Mahlzeit class="mahlzeit" v-for="Mahlzeit in listEssen" :key="Mahlzeit" :mahlzeiten="Mahlzeit"></Mahlzeit>
-      </b-carousel-slide>
-    </b-carousel>
+    <b-card
+    img-src="https://picsum.photos/600/300/?image=25"
+    img-alt="Image"
+    img-top
+    tag="article"
+    style="max-width: 20rem;"
+    class="mb-2">
+    <b-card-text>
+        <Mahlzeit class="mahlzeit" v-for="Mahlzeit in listEssen" :key="Mahlzeit" :mahlzeiten="Mahlzeit"></Mahlzeit>
+    </b-card-text>
+  </b-card>
 </div>
+
 </template>
 
 <script>
